@@ -1,13 +1,19 @@
 function Financeiro(){
 
 let Soma = parseFloat(prompt("Adicione fundos a sua conta !"));
+if (Soma ===""){
+    Soma++
+}
 
-Money = 0
+let Money = ""
 do{
    
-    let Money = prompt("olá cliente, você tem : " + Soma +"R$ , deseja : \n  1  (Adicionar) \n  2  (Remover) \n  3   (Sair) ");
+     Money = prompt("olá cliente, você tem : " + Soma +"R$ , deseja : " +
+   " \n  1  (Adicionar)" +
+   " \n  2  (Remover)" +
+   " \n  3  (Sair) ");
 
-    switch(Money){
+   switch(Money){
 
      case "1" :
         const Mais = parseFloat(prompt("quanto quer adicionar ?"));
@@ -34,6 +40,7 @@ break;
 
     case "3" :
          alert("Obrigado cliente.");
+         alert("o programa será fechado!");
 
 break;
 
@@ -42,11 +49,7 @@ break;
 
     }
 
-} while ( Money !== "3" ){
 
-         alert("o programa será fechado!");
-    
-    }
+} while ( Money !== "3" )
 }
-
 
